@@ -3,7 +3,7 @@ using InterfaceSegregation_Vehicles_Demo.Logic.Contracts;
 
 namespace InterfaceSegregation_Vehicles_Demo.Logic.Implementations
 {
-    public class Airplane : IVehicle
+    public class Airplane : IAirVehicle, IIdentifiableVehicle
     {
         public string LicencePlate { get; private set; }
 

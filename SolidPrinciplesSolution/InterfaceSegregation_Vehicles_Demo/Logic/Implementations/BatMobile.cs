@@ -3,7 +3,7 @@ using InterfaceSegregation_Vehicles_Demo.Logic.Contracts;
 
 namespace InterfaceSegregation_Vehicles_Demo.Logic.Implementations
 {
-    public class BatMobile : IVehicle
+    public class BatMobile : IAirVehicle, ILandVehicle, IIdentifiableVehicle
     {
         public string LicencePlate { get; private set; }
         public int Speed { get; private set; }

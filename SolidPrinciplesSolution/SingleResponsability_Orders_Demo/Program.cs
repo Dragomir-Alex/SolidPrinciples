@@ -1,5 +1,6 @@
 ﻿using System;
 using SingleResponsability_Orders_Demo.Logic;
+using SingleResponsability_Orders_Demo.Logic.OrderTypes;
 
 namespace SingleResponsability_Orders_Demo
 {
@@ -16,35 +17,29 @@ namespace SingleResponsability_Orders_Demo
 
             var customer = new Customer("Nadia", "Comanici", "nadia@email.com");
 
-            var order = new Order(cart, customer);
-
-            var paymentCreditCard = new PaymentDetails()
-            {
-                PaymentMethod = PaymentMethod.CreditCard,
-                CardNumber = "ABCD 1234 ABCD 1234 ABCD 1234",
-                CardholderName = "Nadia C",
-                ExpiresMonth = 1,
-                ExpiresYear = 2020
-            };
-
-            var paymentCash = new PaymentDetails()
-            {
-                PaymentMethod = PaymentMethod.Cash
-            };
+            var creditCardDetails = new CreditCardDetails(
+                "ABCD 1234 ABCD 1234 ABCD 1234",
+                "Nadia C",
+                1,
+                2020
+                );
 
             // WebSite
             Console.WriteLine("1. Website order:");
-            order.Checkout(paymentCreditCard, true);
+            var onlineOrder = new OnlineOrder(cart, customer, creditCardDetails);
+            onlineOrder.Checkout();
             Console.WriteLine();
 
             // POS Credit Card
             Console.WriteLine("2. POS Credit Card order:");
-            order.Checkout(paymentCreditCard, false);
+            var posCreditCardOrder = new POSCreditCardOrder(cart, customer, creditCardDetails);
+            posCreditCardOrder.Checkout();
             Console.WriteLine();
 
             // POS Cash
             Console.WriteLine("3. POS Cash order:");
-            order.Checkout(paymentCash, false);
+            var posCashOrder = new POSCashOrder(cart, customer);
+            posCashOrder.Checkout();
             Console.WriteLine();
         }
     }

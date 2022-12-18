@@ -9,7 +9,7 @@ namespace InterfaceSegregation_Vehicles_Demo
     {
         static void Main(string[] args)
         {
-            List<IVehicle> vehicles = new List<IVehicle>();
+            List<IIdentifiableVehicle> vehicles = new List<IIdentifiableVehicle>();
 
             var duster = new Car("BV 08 XLN", 45.657974f, 25.601198f);
             duster.IncreaseSpeedBy(60);

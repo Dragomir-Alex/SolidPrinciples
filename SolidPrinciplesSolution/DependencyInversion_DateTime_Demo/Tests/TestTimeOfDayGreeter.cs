@@ -13,7 +13,7 @@ namespace DependencyInversion_DateTime_Demo.Tests
         public void TimeOfDayGreeting_GetProperGreeting_WithMorningTime_Success()
         {
             // arrange
-            var greeter = new TimeOfDayGreeter();
+            var greeter = new TimeOfDayGreeter(new DateTimeProvider());
 
             // act
             var greeting = greeter.GetProperGreeting(name);
@@ -26,7 +26,7 @@ namespace DependencyInversion_DateTime_Demo.Tests
         public void TimeOfDayGreeting_GetProperGreeting_WithAfternoonTime_Success()
         {
             // arrange
-            var greeter = new TimeOfDayGreeter();
+            var greeter = new TimeOfDayGreeter(new DateTimeProvider());
 
             // act
             var greeting = greeter.GetProperGreeting(name);
@@ -39,7 +39,7 @@ namespace DependencyInversion_DateTime_Demo.Tests
         public void TimeOfDayGreeting_GetProperGreeting_WithEveningTime_Success()
         {
             // arrange
-            var greeter = new TimeOfDayGreeter();
+            var greeter = new TimeOfDayGreeter(new DateTimeProvider());
 
             // act
             var greeting = greeter.GetProperGreeting(name);

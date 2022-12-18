@@ -46,17 +46,24 @@
   <ItemGroup>
     <Compile Include="Logic\Cart.cs" />
     <Compile Include="Logic\CartItem.cs" />
+    <Compile Include="Logic\CreditCardDetails.cs" />
     <Compile Include="Logic\Customer.cs" />
     <Compile Include="Logic\Exceptions\InsufficientInventoryException.cs" />
     <Compile Include="Logic\Exceptions\OrderException.cs" />
     <Compile Include="Logic\InventorySystem.cs" />
-    <Compile Include="Logic\Order.cs" />
-    <Compile Include="Logic\PaymentDetails.cs" />
+    <Compile Include="Logic\OrderTypes\OnlineOrder.cs" />
+    <Compile Include="Logic\OrderTypes\Order.cs" />
+    <Compile Include="Logic\OrderTypes\POSCashOrder.cs" />
+    <Compile Include="Logic\OrderTypes\POSCreditCardOrder.cs" />
+    <Compile Include="Logic\Services\InventoryService.cs" />
+    <Compile Include="Logic\Services\NotificationService.cs" />
+    <Compile Include="Logic\Services\PaymentService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

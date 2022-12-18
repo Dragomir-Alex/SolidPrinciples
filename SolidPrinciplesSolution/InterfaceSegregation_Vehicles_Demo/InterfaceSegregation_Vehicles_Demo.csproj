@@ -44,11 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\Contracts\IAirVehicle.cs" />
+    <Compile Include="Logic\Contracts\IIdentifiableVehicle.cs" />
+    <Compile Include="Logic\Contracts\ILandVehicle.cs" />
+    <Compile Include="Logic\Contracts\ISpeedableVehicle.cs" />
     <Compile Include="Logic\Implementations\Airplane.cs" />
     <Compile Include="Logic\Implementations\BatMobile.cs" />
     <Compile Include="Logic\Implementations\Car.cs" />
     <Compile Include="Logic\Coordinate3D.cs" />
-    <Compile Include="Logic\Contracts\IVehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
